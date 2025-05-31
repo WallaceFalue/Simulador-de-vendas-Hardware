@@ -217,15 +217,19 @@ nav a.active {
 
 .imagensHardwareLink {
   display: flex;
-  gap: 2em;
-  justify-content: center;
+  gap: 42em;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px;
+  
 }
 
 .imagensLink {
   height: 28em;
   width: 24em;
   transition: transform 0.3s ease;
+  margin-left: 2em;
 }
 
 .imagensLink:hover {
@@ -570,92 +574,6 @@ footer {
     color: #333;
     font-size: 15px;
 }
-@media (max-width: 768px) {
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.fundadores {
-  background-color: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-}
-.fundadores h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #004080;
-}
-.fundadores .intro {
-  max-width: 800px;
-  margin: 0 auto 40px auto;
-  font-size: 16px;
-  color: #555;
-}
-.equipe {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-.fundador {
-  background-color: #f0f4f8;
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 300px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-.fundador h3 {
-  color: #004080;
-  margin-bottom: 10px;
-}
-.fundador p {
-  font-size: 15px;
-  color: #444;
-}
-@media (max-width: 400px) {
-  .equipe {
-      flex-direction: column;
-      align-items: center;
-  }
-}
-
-.novidades{
-  background-color:  #4e5863;
-  color: white;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  text-align: center;
-  margin-top: 5px;
-  margin-bottom: 30px;
-}
-
-.novidades:hover {
-  transform: translateY(-5px);
-}
-
-.novidadesTexto{
-  background-color: white;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-  text-align: center;
-  display: flex;
-  justify-content: right;
-  flex-direction: column;
-}
-
-.novidadesTexto h2{
-  color: #004080;
-}
-
-.novidadesTexto:hover {
-  transform: translateY(-5px);
-}
 
 .PcGamerAviso {
   display: flex;
@@ -728,4 +646,204 @@ footer {
     font-size: 0.8em; 
     padding: 0.3em 0.5em;
   }
+}
+
+/* ...existing code... */
+.login-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.login-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  display: flex;
+  width: 700px;
+  min-height: 400px;
+  overflow: hidden;
+}
+
+.login-side, .options-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 32px;
+}
+
+.login-side {
+  background: #fff;
+}
+
+.options-side {
+  background: #f8f8fc;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.vertical-divider {
+  width: 2px;
+  background: #ececec;
+}
+
+.login-side h1 {
+  font-size: 2.2em;
+  color: #222;
+  margin-bottom: 0.2em;
+}
+
+.login-desc {
+  color: #555;
+  margin-bottom: 1.5em;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#loginForm label {
+  font-weight: 600;
+  color: #333;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  background: #f6f6fa;
+}
+
+.forgot-link {
+  font-size: 0.95em;
+  color: green;
+  text-decoration: none;
+  margin-bottom: 0.5em;
+  align-self: flex-end;
+}
+
+.login-btn {
+  background: grey;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-btn:hover {
+  background: green;
+}
+
+.login-error {
+  color: green;
+  display: none;
+  font-size: 1em;
+  margin-top: -0.5em;
+}
+
+.options-side h2 {
+  font-size: 1.3em;
+  color: #222;
+  margin-bottom: 1em;
+}
+
+.register-btn, .recruiter-btn {
+  width: 100%;
+  padding: 0.9em;
+  margin-bottom: 1.5em;
+  border: 2px solid green;
+  background: #fff;
+  color: green;
+  font-size: 1.1em;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.register-btn:hover, .recruiter-btn:hover {
+  background: green;
+  color: #fff;
+}
+
+.registroContainer {
+  background: #fff;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-box {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  width: 400px;
+  padding: 40px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-box h1 {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 0.5em;
+}
+
+.register-desc {
+  color: #555;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+#registerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+}
+
+#registerForm label {
+  font-weight: 600;
+  color: #333;
+}
+
+#registerForm input[type="text"],
+#registerForm input[type="email"],
+#registerForm input[type="password"] {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  background: #f6f6fa;
+}
+
+#registerForm input[type="submit"] {
+  background: grey;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9em;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5em;
+}
+
+#registerForm input[type="submit"]:hover {
+  background: green;
 }

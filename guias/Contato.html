@@ -13,7 +13,8 @@
 <body>
   <nav>
     <h1>
-      <a href="../index.html">MegaByte<span class="letraMinuscula">.Shopping</span></a>
+      <a href="inicial.html"
+          >MegaByte<span class="letraMinuscula">.Shopping</span></a>
     </h1>
     <div class="menu">
       <a href="promocoes.html">Promoções</a>
@@ -62,51 +63,32 @@
     <p>(21) 98556-2858</p>
   </footer>
   
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  
   <script>
-    (function() {
-      emailjs.init("LwfO4IXvfPXvAFGGK"); 
-    })();
-  
-    const emailInput = document.querySelector("#emailInput");
-    const nomeInput = document.querySelector("#nomeInput");
-    const motivoInput = document.querySelector("#motivoInput");
-    const mensagemInput = document.querySelector("#mensagemInput");
-    const resultMessage = document.querySelector("#resultMessage");
-    const emailForm = document.querySelector("#emailForm");
-  
-    emailForm.addEventListener("submit", function(event) {
-      event.preventDefault();
-  
-      const email = emailInput.value;
-      const isValid = validateEmail(email);
-  
-      if (isValid) {
-        resultMessage.textContent = "Email válido. Enviando...";
-        resultMessage.style.color = "green";
-  
-        emailjs.sendForm('service_t18kom8', 'template_2hovlxi', this)
-          .then(function() {
-            resultMessage.textContent = "Mensagem enviada com sucesso!";
-            resultMessage.style.color = "green";
-            emailForm.reset();
-          }, function(error) {
-            resultMessage.textContent = "Erro ao enviar: " + JSON.stringify(error);
-            resultMessage.style.color = "red";
-          });
-  
-      } else {
-        resultMessage.textContent = "Email inválido.";
-        resultMessage.style.color = "red";
-      }
-    });
-  
-    const validateEmail = (email) => {
-      const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
-      return regex.test(email);
+  const emailInput = document.querySelector("#emailInput");
+  const emailForm = document.querySelector("#emailForm");
+  const resultMessage = document.querySelector("#resultMessage");
+
+  function validateEmail(email) {
+    const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
+    return regex.test(email);
+  }
+
+  emailForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const email = emailInput.value;
+    const isValid = validateEmail(email);
+
+    if (isValid) {
+      resultMessage.textContent = "";
+      alert("Mensagem enviada com sucesso!");
+      emailForm.reset();
+    } else {
+      resultMessage.textContent = "Email inválido.";
+      resultMessage.style.color = "red";
     }
-  </script>
+  });
+</script>
 </body>
 
 </html>
