@@ -1,0 +1,731 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 0;
+  padding-top: 60px;
+}
+
+.baner {
+  display: flex;
+  justify-content: center;
+}
+
+.baner img {
+  width: 90%;
+  height: 24em;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+main p,
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+main ul {
+  list-style-type: disc;
+  margin-left: 40px;
+}
+
+.PCatencao {
+  display: flex;
+  flex-direction: column;
+  border: 5px dashed orangered;
+  color: orangered;
+  margin-left: 6em;
+  width: 90%;
+}
+
+.PCatencao h1 {
+  margin-left: 1em;
+}
+
+.PCatencao h2 {
+  margin-left: 2.5em;
+}
+
+.PCatencao li {
+  margin-left: 2.5em;
+}
+
+.PCatencao span {
+  font-size: 1.2em;
+}
+
+.letraMinuscula {
+  font-size: 0.5em;
+}
+
+.destaque {
+  margin-left: 0.8em;
+  color: orangered;
+  padding: 5px;
+}
+
+nav {
+  background-color: rgb(31, 30, 30);
+  padding: 1em 2em;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav h1 {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  transition: all 0.3s ease;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #444;
+  color: #00ff00;
+}
+
+nav a.active {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.espacador {
+  margin-top: 8em;
+}
+
+.subTitulosEspacados {
+  padding: 1em;
+}
+
+.tituloPromocoes {
+  display: flex;
+  background-color: #444;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3em;
+  color: white;
+  padding: 1em;
+  border-radius: 0.1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobreNos {
+  text-align: center;
+  font-size: 3em;
+}
+
+.caixaContainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.produto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: calc(20% - 20px);
+  transition: transform 0.3s ease;
+}
+
+.produto:hover {
+  transform: scale(1.05);
+}
+
+.desconto,
+.parcelamento,
+.nomePC {
+  background-color: #333;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+.descontoMega {
+  background-color: #333;
+  color: #38e20d !important;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 0;
+  text-transform: uppercase;
+}
+
+.imagemProduto {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.produto h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.produto p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.precoAntigo {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.precoNovo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.imagensHardwareLink {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagensLink {
+  height: 28em;
+  width: 24em;
+  transition: transform 0.3s ease;
+}
+
+.imagensLink:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  margin-top: 2em;
+  padding: 4em 8em;
+  background-color: #333;
+  color: white;
+  left: 0;
+}
+
+.PCcontainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.PCcontainer  img {
+  display: flex;
+  align-content: center;
+  width: 32em;
+  height: 32em;
+}
+
+.PCtitulo {
+  display: flex;
+  width: 100%;
+  height: 2.5em;
+  background-color: #333;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+}
+
+.PCtexto {
+  display: flex;
+  width: 60%;
+  height: 32em ;
+  border: 1 #333;
+  background-color: #fff;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  border: 5px solid #333;
+}
+
+.PCtexto h3 {
+  text-align: center;
+  background-color: #33333333;
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.PCtexto h4 {
+  color: #333;
+  text-align: right;
+  margin-right: 1em;
+}
+
+.PCcontainer p {
+  font-size: 1em;
+  color: #333;
+}
+
+.PCpecaImagem {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.PCpecaImagem img {
+  height: 3em;
+  width: 3.5em;
+}
+
+.PCpecaImagem span {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.textosobre{
+  text-align: center;
+  line-height: 2em;
+  margin-left: 12em; 
+}
+
+.textosobre h1{
+  font-size: 2em;
+  margin-bottom: 1.5em;
+  margin-top: 2em;
+
+}
+
+.textosobre p{
+  font-size: 1.5em;
+}
+
+.caixasobre{
+  width: 80%;
+  background-color: #4e5863;
+  color: white;
+  border: 5px solid #fff;
+  border-radius: 1em;
+}
+
+.caixasobre1{
+  flex-direction: column;
+  padding: 20px;
+}
+
+.monteseuPCimgContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.monteSuePCimg {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+.monteSuePCpecas:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.monteSuePCpecas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(15% - 20px);
+  height: 300px;
+  padding: 1em;
+  background-color: #f9f9f9;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.monteSuePCpecas h3 {
+  font-size: 1.2em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.monteSuePCpecas span {
+  font-size: 1em;
+  color: #555;
+  font-weight: bold;
+}
+
+.TituloMonteseuPC {
+  font-size: 3em;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: white;
+  text-align: center;
+}
+
+.monteSeuPCCompletoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.monteSeuPCCompleto {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  width: 80%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.monteSeuPCCompleto img {
+  width: 6em;
+  height: 6em;
+  border-radius: 8px;
+}
+
+.monteSeuPCCompleto h3 {
+  font-size: 1.2em;
+}
+
+.monteSeuPCCompleto span {
+  font-size: 1em;
+  font-weight: bold;
+  color: #00ff00;
+  text-align: right;
+}
+
+
+.caixaLoginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  padding: 20px; 
+}
+
+#form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  margin-right: 40px;
+}
+
+.perifericos{
+  display: flex;
+  background-color: #444;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3em;
+  color: white;
+  padding: 1em;
+  border-radius: 0.1em;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#form h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#form h2 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#form input[type="text"],
+#form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#form input[type="submit"] {
+  background-color: #218e55;
+  color: white;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#form input[type="submit"]:hover {
+  background-color: #1b7546;
+}
+
+.imagemLogin {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.perifericos {
+  display: flex;
+  background-color: #444;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3em;
+  color: white;
+  padding: 1em;
+  border-radius: 0.1em;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+}
+
+.objetivos {
+    background-color: #f0f4f8;
+    padding: 60px 20px;
+    text-align: center;
+}
+.objetivos h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #004080;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card h3 {
+    color: #004080;
+    margin-bottom: 15px;
+}
+.card p {
+    color: #333;
+    font-size: 15px;
+}
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.fundadores {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.fundadores h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #004080;
+}
+.fundadores .intro {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-size: 16px;
+  color: #555;
+}
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.fundador {
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.fundador h3 {
+  color: #004080;
+  margin-bottom: 10px;
+}
+.fundador p {
+  font-size: 15px;
+  color: #444;
+}
+@media (max-width: 400px) {
+  .equipe {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+.novidades{
+  background-color:  #4e5863;
+  color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.novidades:hover {
+  transform: translateY(-5px);
+}
+
+.novidadesTexto{
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+}
+
+.novidadesTexto h2{
+  color: #004080;
+}
+
+.novidadesTexto:hover {
+  transform: translateY(-5px);
+}
+
+.PcGamerAviso {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.PCGamerNovidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 1em;
+  gap: 1em;
+  transition: 0.5s;
+}
+
+.PCGamerNovidades h3 {
+  font-size: 1.1em;        
+  text-align: center;       
+  line-height: 1.5;         
+  color: #444;             
+  font-weight: 500;         
+  margin: 0;                
+}
+
+.PCGamerNovidades:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  nav .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1em; 
+    justify-items: center; 
+    padding: 1em;
+  }
+
+  nav a {
+    font-size: 1em; 
+    padding: 0.5em 0.8em; 
+  }
+}
+
+@media (max-width: 768px) {
+  nav .menu {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8em;
+  }
+
+  nav a {
+    font-size: 0.9em; 
+    padding: 0.4em 0.6em;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .menu {
+    grid-template-columns: 1fr; 
+    gap: 0.5em;
+  }
+
+  nav a {
+    font-size: 0.8em; 
+    padding: 0.3em 0.5em;
+  }
+}

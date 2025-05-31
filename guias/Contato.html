@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../imagens/alien.avif" type="image/x-icon">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../responsatividade/contato.css">
+  <title>Contato</title>
+</head>
+
+<body>
+  <nav>
+    <h1>
+      <a href="../index.html">MegaByte<span class="letraMinuscula">.Shopping</span></a>
+    </h1>
+    <div class="menu">
+      <a href="promocoes.html">Promoções</a>
+      <a href="PC Gamer.html">PC Gamer</a>
+      <a href="upgradeEperifericos.html">Kit Upgrade e periféricos</a>
+      <a href="monteSeuPC.html">Monte seu PC</a>
+      <a href="Contato.html" class="active">Contato</a>
+
+    </div>
+  </nav>
+
+  <div class="espacador"></div>
+
+  <main class="caixaLoginContainer">
+    <div id="form">
+      <h1>Seja bem vindo!</h1><br>
+      <h2>Caso tenha alguma dúvida ou reclamação, nos mande um email</h2>
+  
+      <form name="form" id="emailForm" class="caixaLogin">
+        <label>Email</label>
+        <input name="email" placeholder="Digite seu email" id="emailInput" required><br><br>
+  
+        <label>Nome</label>
+        <input type="text" name="nome" placeholder="Digite seu nome" id="nomeInput" required><br><br>
+  
+        <label>Motivo da dúvida ou reclamação</label>
+        <input type="text" name="motivo" placeholder="Digite aqui" id="motivoInput" required><br><br>
+  
+        <label>Mensagem</label>
+        <textarea name="mensagem" placeholder="Digite sua mensagem" id="mensagemInput" required></textarea>
+  
+        <input type="submit" id="btn" value="Enviar">
+      </form>
+  
+      <p id="resultMessage"></p>
+    </div>
+  
+    <img src="../imagens/ladoVermerlho.jpg" alt="propaganda" class="imagemLogin">
+  </main>
+
+  <footer>
+    <h3>Contato:</h3>
+    <p>E-mail: MegaByte@gmail.com</p>
+    <p>Telefone: (21) 98556-2858</p>
+    <p>(21) 98556-2858</p>
+    <p>(21) 98556-2858</p>
+  </footer>
+  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  
+  <script>
+    (function() {
+      emailjs.init("LwfO4IXvfPXvAFGGK"); 
+    })();
+  
+    const emailInput = document.querySelector("#emailInput");
+    const nomeInput = document.querySelector("#nomeInput");
+    const motivoInput = document.querySelector("#motivoInput");
+    const mensagemInput = document.querySelector("#mensagemInput");
+    const resultMessage = document.querySelector("#resultMessage");
+    const emailForm = document.querySelector("#emailForm");
+  
+    emailForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      const email = emailInput.value;
+      const isValid = validateEmail(email);
+  
+      if (isValid) {
+        resultMessage.textContent = "Email válido. Enviando...";
+        resultMessage.style.color = "green";
+  
+        emailjs.sendForm('service_t18kom8', 'template_2hovlxi', this)
+          .then(function() {
+            resultMessage.textContent = "Mensagem enviada com sucesso!";
+            resultMessage.style.color = "green";
+            emailForm.reset();
+          }, function(error) {
+            resultMessage.textContent = "Erro ao enviar: " + JSON.stringify(error);
+            resultMessage.style.color = "red";
+          });
+  
+      } else {
+        resultMessage.textContent = "Email inválido.";
+        resultMessage.style.color = "red";
+      }
+    });
+  
+    const validateEmail = (email) => {
+      const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
+      return regex.test(email);
+    }
+  </script>
+</body>
+
+</html>

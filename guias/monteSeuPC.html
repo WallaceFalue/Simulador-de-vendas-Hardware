@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../responsatividade/monteSeuPC.css">
+    <title>Monte seu PC</title>
+    <link
+      rel="shortcut icon"
+      href="../imagens/alien.avif"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <a href="../index.html"
+          >MegaByte<span class="letraMinuscula">.Shopping</span></a
+        >
+      </h1>
+      <div class="menu">
+        <a href="promocoes.html">Promoções</a>
+        <a href="PC Gamer.html">PC Gamer</a>
+        <a href="upgradeEperifericos.html">Kit Upgrade e periféricos</a>
+        <a href="monteSeuPC.html" class="active">Monte seu PC</a>
+        <a href="Contato.html">Contato</a>
+      
+      </div>
+    </nav>
+    <div class="espacador"></div>
+    <main>
+      <h1>
+        Monte seu Computador:
+      </h1>
+      <h3 class="TituloMonteseuPC">Processadores (AMD):</h3>
+      <section class="monteseuPCimgContainer">
+        <div class="monteSuePCpecas" onclick="apertadoP(this)">
+          <img src="../imagens/Ryzen 55600.webp" alt="" class="monteSuePCimg" />
+          <h3>Ryzen 5 5600X</h3>
+          <span>1.100,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoP(this)">
+          <img src="../imagens/Ryzen 55600.webp" alt="" class="monteSuePCimg" />
+          <h3>Ryzen 5 5600</h3>
+          <span>950,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoP(this)">
+          <img
+            src="../imagens/ryzen 7 caixa.webp"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Ryzen 7 5700X</h3>
+          <span>1.300,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoP(this)">
+          <img src="../imagens/Ryzen 55600.webp" alt="" class="monteSuePCimg" />
+          <h3>Ryzen 5 3600<br /></h3>
+          <span>400,00</span>
+        </div>
+      </section>
+
+      <script>
+        function apertadoP(botaoClicadoP) {
+          const mensagemP = document.getElementById("mensagemP");
+          const imagemP = botaoClicadoP.querySelector("img").src;
+          const textoP = botaoClicadoP.querySelector("h3").innerHTML;
+          const precoP = botaoClicadoP.querySelector("span").innerHTML;
+
+          mensagemP.innerHTML = `
+      <img src="${imagemP}" class="monteSeuPCCompleto img" />
+      <h3>${textoP}</h3>
+      <span>${precoP}</span>
+    `;
+          const caixa = botaoClicadoP.closest(".monteseuPCimgContainer");
+          const botoesP = caixa.querySelectorAll(".monteSuePCpecas");
+          botoesP.forEach((el) => (el.style.backgroundColor = ""));
+          botaoClicadoP.style.backgroundColor = "#00ff00";
+        }
+      </script>
+
+      <h3 class="TituloMonteseuPC">Coolers:</h3>
+      <section class="monteseuPCimgContainer">
+        <div class="monteSuePCpecas" onclick="apertadoC(this)">
+          <img
+            src="../imagens/Cooler Master ML360L ARGB (360mm).webp"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Cooler Master ML360L ARGB</h3>
+          <span>350,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoC(this)">
+          <img
+            src="../imagens/Cooler Redragon.jpeg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Cooler Redragon skadi rgb preto</h3>
+          <span>180,00</span>
+        </div>
+      </section>
+
+      <script>
+        function apertadoC(botaoClicadoC) {
+          const mensagemC = document.getElementById("mensagemC");
+          const imagemC = botaoClicadoC.querySelector("img").src;
+          const textoC = botaoClicadoC.querySelector("h3").innerHTML;
+          const precoC = botaoClicadoC.querySelector("span").innerHTML;
+
+          mensagemC.innerHTML = `
+        <img src="${imagemC}" class="monteSeuPCCompleto img"/>
+        <h3>${textoC}</h3>
+        <span>${precoC}</span>
+        `;
+          const caixa = botaoClicadoC.closest(".monteseuPCimgContainer");
+          const botoesC = caixa.querySelectorAll(".monteSuePCpecas");
+          botoesC.forEach((el) => (el.style.backgroundColor = ""));
+          botaoClicadoC.style.backgroundColor = "#00ff00";
+        }
+      </script>
+
+      <h3 class="TituloMonteseuPC">Placas mãe:</h3>
+      <section class="monteseuPCimgContainer">
+        <div class="monteSuePCpecas" onclick="apertadoPM(this)">
+          <img
+            src="../imagens/Placa Mãe Gigabyte B550M AORUS ELITE AX WIFI.jpg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Gigabyte B550M AORUS Elite</h3>
+          <span>750,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoPM(this)">
+          <img
+            src="../imagens/ASRock A320M-HDV R4.0.jpg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>ASRock A320M-HDV R4.0</h3>
+          <span>360,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoPM(this)">
+          <img
+            src="../imagens/ASUS TUF Gaming B550-Plus Wi-Fi – R$ 900 - 1.100.jpg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>ASUS TUF Gaming B550-Plus Wi-Fi</h3>
+          <span>1.000,00</span>
+        </div>
+      </section>
+
+      <script>
+        function apertadoPM(botaoClicadoPM) {
+          const mensagemPM = document.getElementById("mensagemPM");
+          const imagemPM = botaoClicadoPM.querySelector("img").src;
+          const textPM = botaoClicadoPM.querySelector("h3").innerHTML;
+          const precoPM = botaoClicadoPM.querySelector("span").innerHTML;
+
+          mensagemPM.innerHTML = `
+          <img src="${imagemPM}" class="monteSeuPCCompleto img"/>
+          <h3>${textPM}</h3>
+          <span>${precoPM}</span>`;
+
+          const caixa = botaoClicadoPM.closest(".monteseuPCimgContainer");
+          const botoesPM = caixa.querySelectorAll(".monteSuePCpecas");
+          botoesPM.forEach((el) => (el.style.backgroundColor = ""));
+          botaoClicadoPM.style.backgroundColor = "#00ff00";
+        }
+      </script>
+
+      <h3 class="TituloMonteseuPC">Memórias:</h3>
+      <section class="monteseuPCimgContainer">
+        <div class="monteSuePCpecas" onclick="apertadoM(this)">
+          <img
+            src="../imagens/MemoriaRam2x8Asgard.avif"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Memoria ram Asgard RGB 16Gb(2x8) ddr4</h3>
+          <span>420,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoM(this)">
+          <img
+            src="../imagens/32GB (2x16GB) DDR5 6000MHz Corsair Vengeance RGB.jpg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Memória Corsair Vengeance RGB - 32GB(2x16GB), DDR4, 3200Mhz</h3>
+          <span>320,00</span>
+        </div>
+      </section>
+
+      <script>
+        function apertadoM(botaoClicadoM) {
+          const mensagemM = document.getElementById("mensagemM");
+          const imagemM = botaoClicadoM.querySelector("img").src;
+          const textoM = botaoClicadoM.querySelector("h3").innerHTML;
+          const precoM = botaoClicadoM.querySelector("span").innerHTML;
+
+          mensagemM.innerHTML = `
+         <img src="${imagemM}" class="monteSeuPCCompleto img"/>
+         <h3>${textoM}</h3>
+         <span>${precoM}</span>
+      `;
+          const caixa = botaoClicadoM.closest(".monteseuPCimgContainer");
+          const botoesM = caixa.querySelectorAll(".monteSuePCpecas");
+          botoesM.forEach((el) => (el.style.backgroundColor = ""));
+          botaoClicadoM.style.backgroundColor = "#00ff00";
+        }
+      </script>
+
+      <h3 class="TituloMonteseuPC">Placa de vídeo:</h3>
+      <section class="monteseuPCimgContainer">
+        <div class="monteSuePCpecas" onclick="apertadoPV(this)">
+          <img
+            src="../imagens/Placa de Video ASRock Intel ARC A750.jpg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Placa de Video ASRock Intel ARC A750</h3>
+          <span>1500,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoPV(this)">
+          <img
+            src="../imagens/Rx 6600 BioStar.avif"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Placa de vídeo RX 6600 BioStar</h3>
+          <span>1.300,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoPV(this)">
+          <img src="../imagens/RTX 3060.jpg" alt="" class="monteSuePCimg" />
+          <h3>Placa de vídeo RTX 3060 12Gb</h3>
+          <span>1600,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoPV(this)">
+          <img src="../imagens/RTX 5090.webp" alt="" class="monteSuePCimg" />
+          <h3>Placa de vídeo RTX 5090 16GB</h3>
+          <span>28.000,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoPV(this)">
+          <img
+            src="..//imagens/GT 1030 2GB.avif"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Placa de vídeo GT 1030 2GB</h3>
+          <span>80,00</span>
+        </div>
+      </section>
+
+      <script>
+        function apertadoPV(botaoClicadoPV) {
+          const mensagemPV = document.getElementById("mensagemPV");
+          const imagemPV = botaoClicadoPV.querySelector("img").src;
+          const textoPV = botaoClicadoPV.querySelector("h3").innerHTML;
+          const precoPV = botaoClicadoPV.querySelector("span").innerHTML;
+
+          mensagemPV.innerHTML = `
+         <img src="${imagemPV}" class="monteSeuPCCompleto img"/>
+         <h3>${textoPV}</h3>
+         <span>${precoPV}</span>`;
+
+          const caixa = botaoClicadoPV.closest(".monteseuPCimgContainer");
+          const botoesPV = caixa.querySelectorAll(".monteSuePCpecas");
+          botoesPV.forEach((el) => (el.style.backgroundColor = ""));
+          botaoClicadoPV.style.backgroundColor = "#00ff00";
+        }
+      </script>
+
+      <h3 class="TituloMonteseuPC">Armazenamento:</h3>
+
+      <section class="monteseuPCimgContainer">
+        <div class="monteSuePCpecas" onclick="apertadoA(this)">
+          <img
+            src="..//imagens/SSDNvme3Kingston.webp"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>SSD NVme 3 Kingston 1tb</h3>
+          <span>450,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoA(this)">
+          <img
+            src="../imagens/Ssd Mancer Reaper RF.jpg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>SSD Mancer Reaper RF - 128Gb</h3>
+          <span>120,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoA(this)">
+          <img
+            src="../imagens/1TB Barracuda, 7200 RPM.webp"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>HD 1TB Barracuda - 7200 RPM</h3>
+          <span>400,00</span>
+        </div>
+      </section>
+
+      <script>
+        function apertadoA(botaoClicadoA) {
+          const mensagemA = document.getElementById("mensagemA");
+          const imagemA = botaoClicadoA.querySelector("img").src;
+          const textoA = botaoClicadoA.querySelector("h3").innerHTML;
+          const precoA = botaoClicadoA.querySelector("span").innerHTML;
+
+          mensagemA.innerHTML = `
+         <img src="${imagemA}" class="monteSeuPCCompleto img"/>
+         <h3>${textoA}</h3>
+         <span>${precoA}</span>`;
+
+          const caixa = botaoClicadoA.closest(".monteseuPCimgContainer");
+          const botoesA = caixa.querySelectorAll(".monteSuePCpecas");
+          botoesA.forEach((el) => (el.style.backgroundColor = ""));
+          botaoClicadoA.style.backgroundColor = "#00ff00";
+        }
+      </script>
+
+      <h3 class="TituloMonteseuPC">Fontes:</h3>
+
+      <section class="monteseuPCimgContainer">
+        <div class="monteSuePCpecas" onclick="apertadoF(this)">
+          <img
+            src="../imagens/fonteRedragon500w80Plus.jpg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Fonte Redragon 500W 80 Plus</h3>
+          <span>300,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoF(this)">
+          <img
+            src="../imagens/FonteModularGoldCorsair.avif"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Fonte modular Corsair 850W Gold</h3>
+          <span>650,00</span>
+        </div>
+      </section>
+
+      <script>
+        function apertadoF(botaoClicadoF) {
+          const mensagemF = document.getElementById("mensagemF");
+          const imagemF = botaoClicadoF.querySelector("img").src;
+          const textoF = botaoClicadoF.querySelector("h3").innerHTML;
+          const precoF = botaoClicadoF.querySelector("span").innerHTML;
+
+          mensagemF.innerHTML = `
+         <img src="${imagemF}" class="monteSeuPCCompleto img"/>
+         <h3>${textoF}</h3>
+         <span>${precoF}</span>`;
+
+          const caixa = botaoClicadoF.closest(".monteseuPCimgContainer");
+          const botoesF = caixa.querySelectorAll(".monteSuePCpecas");
+          botoesF.forEach((el) => (el.style.backgroundColor = ""));
+          botaoClicadoF.style.backgroundColor = "#00ff00";
+        }
+      </script>
+
+      <h3 class="TituloMonteseuPC">Gabinetes:</h3>
+
+      <section class="monteseuPCimgContainer">
+        <div class="monteSuePCpecas" onclick="apertadoG(this)">
+          <img
+            src="../imagens/Gabinete Gamer DT3 Hyper.jpg"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Gabinete Gamer DT3 Hyper</h3>
+          <span>450,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoG(this)">
+          <img src="../imagens/Computador 2.jpg" alt="" class="monteSuePCimg" />
+          <h3>Azza Pyramid 804V RGB (fans)</h3>
+          <span>2.000,00</span>
+        </div>
+        <div class="monteSuePCpecas" onclick="apertadoG(this)">
+          <img
+            src="../imagens/Computador Gamer 1.webp"
+            alt=""
+            class="monteSuePCimg"
+          />
+          <h3>Lian Li O11 Dynamic RGB ou Like-Tec similar (com fans)</h3>
+          <span>420,00</span>
+        </div>
+      </section>
+
+      <script>
+        function apertadoG(botaoClicadoG) {
+          const mensagemG = document.getElementById("mensagemG");
+          const imagemG = botaoClicadoG.querySelector("img").src;
+          const textoG = botaoClicadoG.querySelector("h3").innerHTML;
+          const precoG = botaoClicadoG.querySelector("span").innerHTML;
+
+          mensagemG.innerHTML = `
+         <img src="${imagemG}" class="monteSeuPCCompleto img"/>
+         <h3>${textoG}</h3>
+         <span>${precoG}</span>`;
+
+          const caixa = botaoClicadoG.closest(".monteseuPCimgContainer");
+          const botoesG = caixa.querySelectorAll(".monteSuePCpecas");
+          botoesG.forEach((el) => (el.style.backgroundColor = ""));
+          botaoClicadoG.style.backgroundColor = "#00ff00";
+        }
+      </script>
+
+      <h1 class="TituloMonteseuPC">Seu Computador</h1>
+
+      <div class="monteSeuPCCompletoContainer">
+        <div class="monteSeuPCCompleto" id="mensagemP"></div>
+        <div class="monteSeuPCCompleto" id="mensagemC"></div>
+        <div class="monteSeuPCCompleto" id="mensagemPM"></div>
+        <div class="monteSeuPCCompleto" id="mensagemM"></div>
+        <div class="monteSeuPCCompleto" id="mensagemPV"></div>
+        <div class="monteSeuPCCompleto" id="mensagemA"></div>
+        <div class="monteSeuPCCompleto" id="mensagemF"></div>
+        <div class="monteSeuPCCompleto" id="mensagemG"></div>
+        <div class="monteSeuPCCompleto" id="precoTotal"><h3>Total:</h3></div>
+      </div>
+
+      <script>
+        const ids = ["mensagemP", "mensagemC", "mensagemPM", "mensagemM", "mensagemPV", "mensagemA", "mensagemF", "mensagemG"];
+      
+        function calcularTotal() {
+          let total = 0;
+      
+          ids.forEach(id => {
+            const span = document.querySelector(`#${id} span`);
+            if (span) {
+              const preco = span.innerText.replace(/\./g, "").replace(",", ".");
+              const valor = parseFloat(preco);
+              if (!isNaN(valor)) total += valor;
+            }
+          });
+      
+          document.getElementById("precoTotal").innerHTML = `<h3>Total: R$ ${total.toFixed(2).replace(".", ",")}</h3>`;
+        }
+      
+        ids.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            new MutationObserver(calcularTotal).observe(el, { childList: true, subtree: true });
+          }
+        });
+      </script>
+      
+    </main>
+    <footer>
+      <h3>Contato:</h3>
+      <p>E-mail: MegaByte@gmail.com</p>
+      <p>Telefone: (21) 98556-2858</p>
+      <p>(21) 98556-2858</p>
+      <p>(21) 98556-2858</p>
+    </footer>
+  </body>
+</html>

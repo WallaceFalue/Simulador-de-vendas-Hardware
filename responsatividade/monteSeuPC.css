@@ -1,0 +1,58 @@
+@media (max-width: 1024px) {
+    header {
+      padding: 10px 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .monteseuPCimgContainer{
+    max-width: 60%;
+    }
+    
+    .container-montagem {
+      flex-direction: column;
+      padding: 30px;
+    }
+  
+    .monteseuPCimgContainer {
+      flex-direction: column;
+    }
+
+    .monteSuePCpecas {
+      width: 80%;
+    }
+     
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  }
+
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .monteseuPCimgContainer {
+      flex-direction: column;
+    }
+
+    .monteSuePCpecas {
+      width: 80%;
+    }
+
+    .container-montagem {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    
+    footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 15px;
+    }
+  }
+  
